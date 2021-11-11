@@ -12,13 +12,13 @@ namespace SignalrRChat
             Console.WriteLine($"Heeeeeey SendMessage executed with this message: user = {message.User}, message = {message.Message}");
             Console.WriteLine("Server: Preparing to execute ReceiveMessage...........................................");
             await Clients.All.ReceiveMessage(message);
-        }
+        }        
+    }
 
-        public class ChatMessage
-        {
-            public string User { get; set; }
+    public class ChatMessage
+    {
+        public string User { get; set; }
 
-            public string Message { get; set; }
-        }
+        public string Message { get; set; }
     }
 }
